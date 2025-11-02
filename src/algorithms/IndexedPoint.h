@@ -15,6 +15,11 @@ namespace houdini::tools::utils {
         return left.point < right.point;
     }
 
+    template <typename PointType>
+    inline bool operator==(const IndexedPoint<PointType>& left, const IndexedPoint<PointType>& right) {
+        return left.index == right.index;
+    }
+
     using IndexedPoint2D = IndexedPoint<UT_Vector2>;
     using IndexedPoint3D = IndexedPoint<UT_Vector3>;
 }
