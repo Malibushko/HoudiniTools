@@ -16,7 +16,15 @@ set(PROJECT_NAME "HTools")
 include(src/CMakeLists.txt)
 
 add_library(${PROJECT_NAME} SHARED ${HTOOLS_HEADERS} ${HTOOLS_SOURCES}
-        src/algorithms/IndexedPoint.h)
+        src/algorithms/IndexedPoint.h
+        src/geo/SOP_RandomLines.cpp
+        src/geo/SOP_RandomLines.h
+        src/geo/SOP_SegmentsIntersection.cpp
+        src/geo/SOP_SegmentsIntersection.h
+        src/algorithms/Segment.h
+        src/algorithms/AVLTree.h
+        src/algorithms/IndexedValue.h
+)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
     set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
